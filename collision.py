@@ -14,15 +14,14 @@ def collision():
     hashes = open("hashes1.txt", "w")
     value_and_hash = open("hashes2.txt","w")
 
-    for i in f2:
-        hash_obj = hashlib.sha1((bytes(i, encoding = "utf-8"))).hexdigest()
+    for x in f2:
+        hash_obj = hashlib.sha1((bytes(x, encoding = "utf-8"))).hexdigest()
         entry_list.append(str(hash_obj))
         hashes.write(str(hash_obj)[:6] +  "\n")
-        value_and_hash.write(i +"-" + str(hash_obj)[:6] +  "\n")
+        value_and_hash.write(x +"-" + str(hash_obj)[:6] +  "\n")
     hashes.close()
     value_and_hash.close()
     
-
     print("\nHashing finished")
 
 collision()
