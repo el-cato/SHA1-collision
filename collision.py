@@ -15,7 +15,7 @@ def collision():
     value_and_hash = open("hashes2.txt","w")
 
     for x in f2:
-        hash_obj = hashlib.sha1((bytes(x, encoding = "utf-8"))).hexdigest()
+        hash_obj = hashlib.sha1(bytes(x, encoding = "utf-8")).hexdigest()
         entry_list.append(str(hash_obj))
         hashes.write(str(hash_obj)[:6] +  "\n")
         value_and_hash.write(x +"-" + str(hash_obj)[:6] +  "\n")
