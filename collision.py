@@ -4,7 +4,7 @@ import hashlib
     characters of the hashed value and writes the outputs to two new files'''
 
 def collision():
-    file = open("word_list.txt", "r", encoding="latin1")
+    file = open("word_list.txt", "r")
     f1 = file.read()
     f2 = f1.split("\n")
     file.close()
